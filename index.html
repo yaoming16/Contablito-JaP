@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Contablito</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Contablito</h1>
+
+        <div id="content_div" class="flex-item"> 
+            <div id="description-div">
+                <label for="description">Descripción: </label>
+                <input id="description" type="text" name="description" placeholder="Ingrese la descriptción">
+            </div>
+
+            <div id="transaction-div" class="flex-item">
+                <label for="buy">Tipo de transacción: </label>
+                <input id="buy" type="radio" name="transaction" class="transaction">
+                <label for="buy">Compra</label> 
+                <input id="sell" type="radio" name="transaction" class="transaction">
+                <label for="sell">Venta</label> 
+            </div>
+
+            <div id="iva-div" class="flex-item">
+                <label for="basic">Tipo de IVA: </label>
+                <input id="basic" type="radio" name="iva" class="iva">
+                <label for="basic">Básico</label> 
+                <input id="sell" type="radio" name="iva" class="iva">
+                <label for="sell">Mínimo</label>
+                <input id="sell" type="radio" name="iva" class="iva">
+                <label for="sell">Exento</label>
+            </div>
+
+            <div id="subtotal-div" class="flex-item">
+                <label for="subtotal">Subtotal ($)</label>
+                <input type="number" name="subtotal" id="subtotal">
+                <button  id="btn">Ingresar</button>
+            </div>
+
+            <table id="table" class="flex-item">
+                <tr>
+                    <th>Description</th>
+                    <th>Tipo</th>
+                    <th>Subtotal($)</th>
+                    <th>IVA ($)</th>
+                    <th>Total (IVA inc.)</th>
+                </tr>
+
+            </table>
+
+            <div id="bought-div" class="flex-item">
+            <p>Total de ventas: <span id="total_bought"></span></p> 
+            </div>
+
+            <div id="buy-div" class="flex-item">
+                <p>Total de compras: <span id="total_sold"></span></p> 
+            </div>
+
+            <button id="clearBtn">Limpiar</button>
+            
+
+        </div>
+   </div>
+    
+</body>
+<script src="contablito.js"></script>
+</html>
